@@ -15,6 +15,8 @@
     <a href="{% url 'taxi:car-delete' pk=car.id %}" class="btn btn-danger link-to-page">
       Delete
     </a>
+    <br>
+    <a href="javascript:history.back()">Cancel</a>
 
     <a href="{% url 'taxi:car-update' pk=car.id %}" class="btn btn-secondary link-to-page">
       Update

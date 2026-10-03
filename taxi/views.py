@@ -113,9 +113,3 @@ class DriverLicenseUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Driver
     form_class = DriverLicenseUpdateForm
     success_url = reverse_lazy("taxi:driver-list")
-
-    def form_valid(self, form):
-        driver = self.get_object()
-        driver.license_number = form.cleaned_data["license_number"]
-        driver.save()
-        return super().form_valid(form)
